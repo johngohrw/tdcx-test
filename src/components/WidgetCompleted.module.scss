@@ -1,0 +1,25 @@
+@import '../scss/common.scss';
+@import '../scss/utils.scss';
+
+.widgetWrapper {
+    @extend .card;
+    @extend .widget;
+
+    @media (max-width: $screen-width-mobile-large) {
+        border-radius: 0;
+    }
+}
+
+.content {
+    font-size: 20px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.completedValue {
+    font-size: 64px;
+    font-weight: 600;
+    color: #1890ff;
+    margin-right: 0;
+    margin-bottom: -10px;
+}

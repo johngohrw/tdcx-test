@@ -1,0 +1,19 @@
+@import '../scss/common.scss';
+@import '../scss/utils.scss';
+
+.widgetWrapper {
+    @extend .card;
+    @extend .widget;
+
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $screen-width-mobile-large) {
+        border-radius: 0;
+    }
+
+    @media (max-width: $screen-width-tablet-large) {
+        min-height: 180px;
+
+    }
+}

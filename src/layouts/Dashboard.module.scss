@@ -1,0 +1,21 @@
+@import '../scss/utils.scss';
+
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px 10px;
+
+  @media (min-width: $screen-width-mobile-large){
+    padding: 20px 15px 10px;  
+  }
+}
+
+.layoutContent {
+  width: 100%;
+  height: 100%;
+  max-width: $screen-width-desktop;
+}

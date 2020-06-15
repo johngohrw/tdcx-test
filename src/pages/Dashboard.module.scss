@@ -1,0 +1,90 @@
+@import '../scss/utils.scss';
+@import '../scss/common.scss';
+
+.spinnerWrapper {
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.widgetContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  > :not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $screen-width-tablet-large) {
+    flex-direction: row;
+
+    > :not(:last-child) {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.titleActionBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  @media (min-width: $screen-width-mobile-large) {
+    flex-direction: row;
+  }
+
+  @media (max-width: $screen-width-mobile-large) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  
+}
+
+.taskTitle {
+  text-align: center;
+  width: 100%;
+
+  @media (min-width: $screen-width-mobile-large) {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.taskSearch {
+  margin-right: 0;
+  margin-bottom: 5px;
+  
+  @media (min-width: $screen-width-mobile-large) {
+    margin-right: 5px;
+    margin-bottom: 0;
+    
+    > span {
+      width: 250px;
+    }
+  }
+}
+
+.taskList {
+  @extend .card;
+
+  padding: 5px 20px;
+  transition-duration: 200ms;
+
+  > div:not(:last-child) {
+    border-bottom: 1px solid #E8E8E8;
+  }
+
+  > div {
+    border-bottom: none;
+  }
+
+  @media (max-width: $screen-width-mobile-large) {
+    border-radius: 0;
+  }
+}

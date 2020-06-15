@@ -1,0 +1,64 @@
+$base-color: #f0f0f0;
+$shine-color: rgb(211,211,211);
+$animation-duration-short: 1s;
+$animation-duration: 1.4s;
+$animation-duration-long: 2.0s;
+$avatar-offset: 52 + 16;
+
+@mixin background-gradient-short {
+  background-image: linear-gradient(90deg, $base-color 0px, $shine-color 30px, $base-color 60px);
+  background-size: 200px;
+}
+
+@mixin background-gradient-medium {
+  background-image: linear-gradient(90deg, $base-color 0px, $shine-color 80px, $base-color 160px);
+  background-size: 600px;
+}
+
+@mixin background-gradient-long {
+  background-image: linear-gradient(90deg, $base-color 0px, $shine-color 120px, $base-color 240px);
+  background-size: 1000px;
+}
+
+.skeletonLoader {
+  border-radius: 4px;
+  color: rgba(0, 0, 0, 0) !important;
+  animation: shine-lines $animation-duration infinite ease-out;
+  @include background-gradient-medium;
+}
+
+.skeletonLoaderLong {
+  @extend .skeletonLoader;
+  @include background-gradient-long;
+  animation: shine-lines $animation-duration-long infinite ease-out !important;
+}
+
+.skeletonLoaderShort {
+  @extend .skeletonLoader;
+  @include background-gradient-short;
+  animation: shine-lines $animation-duration-short infinite ease-out !important;
+}
+
+@keyframes shine-lines {
+  0% {
+    background-position: -100%;
+  }
+
+  99%, 100% {
+    background-position: 100%;
+  }
+}
+
+
+.imageRounded60 {
+  width:60px;
+  height:60px;
+  border-radius: 50%;
+}
+
+.imageRounded48 {
+    width:48px;
+    height:48px;
+    border-radius: 50%;
+  }
+  

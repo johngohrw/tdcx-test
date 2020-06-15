@@ -1,0 +1,8 @@
+@import './scss/typography.scss';
+@import './scss/colors.scss';
+
+#root {
+    min-height: 100vh;
+    height: 100%;
+    background-color: $bg-light;
+}

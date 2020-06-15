@@ -1,0 +1,19 @@
+@import '../scss/common.scss';
+@import '../scss/utils.scss';
+
+.emptyListWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $screen-width-mobile-large) {  
+      min-height: calc(100vh - 120px);
+    }
+  }
+
+.emptyList {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

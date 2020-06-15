@@ -1,0 +1,29 @@
+.taskListItem {
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+    font-size: 20px;
+    transition-duration: 200ms;
+}
+
+.loading {
+    filter: blur(5px);
+}
+
+.taskDescription {
+    width: 100%;
+    margin-left: 20px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.actionButton {
+    margin: 0 5px;
+}
